@@ -52,14 +52,8 @@ function toggle_visibility(id) {
 }
 
 
-
-
-
-
 const updateWeather = () => {
-    console.log("123123");
-    alert("123123");
-    ipcRenderer.send('weather-updated', "123123")
+    ipcRenderer.send('login-updated', "123123")
         // getGeoLocation().then(getWeather).then((weather) => {
         //   // Use local time
         //   weather.currently.time = Date.now()
@@ -72,12 +66,3 @@ const updateWeather = () => {
     //   previousWeather = weather
     // })
 }
-
-
-
-// // Refresh weather every 10 minutes
-// const tenMinutes = 10 * 60 * 1000
-// setInterval(updateWeather, tenMinutes)
-
-// // Update initial weather when loaded
-// document.addEventListener('DOMContentLoaded', updateWeather)

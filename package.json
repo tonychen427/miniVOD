@@ -1,26 +1,21 @@
 {
-  "name": "weathered",
-  "productName": "Weathered",
+  "name": "VOD Lite S4B",
+  "productName": "VOD Lite S4B",
   "version": "1.0.0",
-  "main": "main.js",
-  "license": "ISC",
-  "author": "Kevin Sawicki",
+  "main": "electron.js",
+  "license": "MIT",
+  "author": "Tony Chen",
   "scripts": {
     "start": "electron .",
     "package": "electron-packager ./ --platform=darwin --arch=x64 --out=out --icon=./icon.icns --overwrite",
     "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kevinsawicki/tray-example.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kevinsawicki/tray-example/issues"
-  },
-  "homepage": "https://github.com/kevinsawicki/tray-example#readme",
   "devDependencies": {
     "electron-debug": "^1.0.1",
     "electron-packager": "^7.3.0",
     "electron-prebuilt": "^1.2.7"
+  },
+  "dependencies": {
+    "electron-oauth2": "^2.3.0"
   }
 }

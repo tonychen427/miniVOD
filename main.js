@@ -110,7 +110,9 @@ ipcMain.on('show-window', () => {
   showWindow()
 })
 
-ipcMain.on('weather-updated', (event, data) => {
+ipcMain.on('login-updated', (event, data) => {
      //window.loadURL(`http://www.google.com`);
+     //window.loadURL(`file://${path.join(__dirname, 'index.html')}`)
+     window.loadURL(`https://192.84.19.117:8445/sso/login?bg=0`)
      console.log(data);
 })
