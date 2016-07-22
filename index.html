@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./vendor/css/photon.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./index.css" media="screen" charset="utf-8">
+    <script charset="utf-8">
+    require('./index')
+    </script>
+</head>
+
+<body>
+    <div class="header-arrow"></div>
+    <div class="window">
+        <header class="toolbar toolbar-header">
+            <h1 class="title">Virtual Office<span class="js-update-time"></span></h1>
+            <div class="toolbar-actions">
+                <!-- <img src="./icons/8x8-Logo.png" clss="logo"> -->
+                <button class="btn btn-default btn-dropdown pull-right">
+                    <span class="icon icon-cog"></span>
+                </button>
+            </div>
+        </header>
+        <div class="window-content">
+            <div class="pane">
+                <ul class="list-group">
+                    <li class="list-group-header">
+                        <input class="form-control" type="text" placeholder="Search for someone">
+                    </li>
+                    <li class="list-group-item">
+                        <img class="img-circle media-object pull-left" src="./assets/img/user7-128x128.jpg" width="32" height="32">
+                        <div class="media-body">
+                            <strong>List item title</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="img-circle media-object pull-left" src="./assets/img/user8-128x128.jpg" width="32" height="32">
+                        <div class="media-body">
+                            <strong>List item title</strong>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                    <video id="camera" autoplay width="280px" height="200px" style="display:none"> </video>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="toolbar toolbar-footer">
+            <div class="footer-link">
+                Powered by <a href="http://www.8x8.com">8x8 Inc.</a>
+            </div>
+            <div class="toolbar-actions pull-right">
+                <div class="btn-group">
+                    <button class="btn btn-default js-refresh-action">
+                        <span class="icon icon-video js-video-action" title="Video"></span>
+                    </button>
+                    <button class="btn btn-default js-refresh-action">
+                        <span class="icon icon-arrows-ccw js-refresh-action" title="Refresh"></span>
+                    </button>
+                    <button class="btn btn-default js-quit-action">
+                        <span class="icon icon-cancel js-quit-action" title="Quit"></span>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
