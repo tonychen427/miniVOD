@@ -1,6 +1,4 @@
 const electron = require('electron')
-
-
 const {app, BrowserWindow, ipcMain, Tray} = electron
 const path = require('path')
 
@@ -10,10 +8,11 @@ const iconsDirectory = path.join(__dirname, 'icons')
 let tray = undefined
 let window = undefined
 
-//require('electron-debug')();
+require('electron-debug')();
 
 // Don't show the app in the doc
 app.dock.hide()
+app.commandLine.appendSwitch("ignore-certificate-errors")
 
 app.on('ready', () => {
   createTray()
@@ -24,7 +23,7 @@ app.on('ready', () => {
 app.on('window-all-closed', () => {
   app.quit()
 })
-app.commandLine.appendSwitch("ignore-certificate-errors")
+
 const createTray = () => {
   //tray = new Tray(path.join(assetsDirectory, 'sunTemplate.png'))
   tray = new Tray(path.join(iconsDirectory,'8x8-Logo.png'))
@@ -71,7 +70,7 @@ const createWindow = () => {
     }
   })
 
-  //window.webContents.openDevTools()
+  window.webContents.openDevTools()
 
   window.loadURL(`file://${path.join(__dirname, 'index.html')}`)
   //window.loadURL(`https://192.84.19.117:8445/sso/login?bg=0`)

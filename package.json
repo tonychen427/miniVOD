@@ -1,8 +1,8 @@
 {
-  "name": "VOD Lite S4B",
+  "name": "VOD-Lite-S4B",
   "productName": "VOD Lite S4B",
   "version": "1.0.0",
-  "main": "electron.js",
+  "main": "main.js",
   "license": "MIT",
   "author": "Tony Chen",
   "scripts": {
